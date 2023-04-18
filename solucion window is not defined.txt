@@ -1,0 +1,41 @@
+
+
+
+
+let height, width;
+if (typeof window !== 'undefined') {
+  height = window.innerHeight;
+  width = window.innerWidth;
+} else {
+  // Asignar un valor predeterminado en caso de que window no exista
+  height = 0;
+  width = 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+if (typeof window !== 'undefined') {
+          window.addEventListener(('mousemove'), (ev) => {
+            if (!isClicking) return
+            const gestureState = gestureStateFromWebEvent(ev, startPositon, lastPosition, false)
+            lastPosition = gestureState
+            handleMove(gestureState)
+          })
+    
+          window.addEventListener(('mouseup'), (ev) => {
+            if (!isClicking) return
+            isClicking = false
+            handleSwipeReleased(setSpringTarget, lastPosition)
+            startPositon = { x: 0, y: 0 }
+            lastPosition = { dx: 0, dy: 0, vx: 0, vy: 0, timeStamp: Date.now() }
+          })
+        }

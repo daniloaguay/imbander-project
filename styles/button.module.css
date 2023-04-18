@@ -1,0 +1,47 @@
+.botonesSwipe {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 5vh;
+  justify-content: space-evenly;
+}
+
+.botonesSwipe__replay { 
+  background-color: white;
+  box-shadow: 0 10px 50px 0 black;
+  padding: 3vw !important;
+  color: orange !important;
+  cursor: pointer;
+}
+
+.botonesSwipe__close {
+  background-color: white;
+  box-shadow: 0 10px 50px 0 black;
+  padding: 3vw !important;
+  color: red !important;
+  cursor: pointer;
+}
+
+.botonesSwipe__star {
+  background-color: white;
+  box-shadow: 0 10px 50px 0 black;
+  padding: 3vw !important;
+  color: rgb(64, 168, 233) !important;
+  cursor: pointer;
+}
+
+.botonesSwipe__fav {
+  background-color: white;
+  box-shadow: 0 10px 50px 0 black;
+  padding: 3vw !important;
+  color: rgb(82, 165, 82) !important;
+  cursor: pointer;
+}
+
+.botonesSwipe__flash {
+  background-color: white;
+  box-shadow: 0 10px 50px 0 black;
+  padding: 3vw !important;
+  color: purple !important;
+  cursor: pointer;
+}
