@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styles from "../styles/tinder.module.css";
-import TinderCard from "react-tinder-card";
 
 import Login from "../components/login";
 import fileManager from "../utils/fileManager";
@@ -54,24 +53,7 @@ export default function Tarjetastinder() {
   
   return (
     <>
-      <div className="tarjetastinder">
-        <div className={styles.tarjetastin}>
-          {people.map((person, index) => (
-            <TinderCard
-              className={styles.swipe}
-              key={index}
-              preventSwipe={["up", "down", "right"]}
-            >
-              <div
-                className={styles.tarjeta}
-                style={{ backgroundImage: `url(${URL.createObjectURL(person.image)})` }}
-              >
-                <h2>{person.user_name}</h2>
-              </div>
-            </TinderCard>
-          ))}
-        </div>
-      </div>
+      
     </>
   );
 }
