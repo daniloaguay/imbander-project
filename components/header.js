@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from 'next/image';
 import styles from "../styles/tinder.module.css";
 import PersonIcon from "@mui/icons-material/Person";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";

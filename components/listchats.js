@@ -47,14 +47,18 @@ export default function Listchats() {
     return chats
       ?.filter((chat) => chat.users.includes(user.email))
       .map((chat) => (
-        <div className={styles.chatlist} onClick={() => redirect(chat.id)}>
+        <div
+          key={chat.id} // Agregar la propiedad 'key' con el valor del 'id' del chat
+          className={styles.chatlist}
+          onClick={() => redirect(chat.id)}
+        >
           <Avatar src="" />
           <text className={styles.text__typography}>
             {getOtherEmail(chat.users, user)}
           </text>
         </div>
       ));
-  };
+  };  
 
   return (
     <div className={styles.listchats}>
