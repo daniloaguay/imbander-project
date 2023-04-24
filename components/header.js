@@ -20,7 +20,7 @@ export default function Header({ backboton }) {
 
         <IconButton href="/app">
           <Image
-            src="/imbander.png"
+            src="/logov2.png"
             className={styles.header_logo}
             alt="logo"
             width={300}
