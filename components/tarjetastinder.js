@@ -53,7 +53,7 @@ export default function Tarjetastinder() {
   
   return (
     <>
-      
+      <h1>ejemplo</h1>
     </>
   );
 }
