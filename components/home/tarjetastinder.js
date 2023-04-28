@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import styles from "../styles/tinder.module.css";
+import styles from "../../styles/tinder.module.css";
 
-import Login from "../components/login";
-import fileManager from "../utils/fileManager";
-import firebaseAuth from "../firebase/firebase_auth.js";
-import firebaseManage from "../firebase/firebase_manage.js";
+import Login from "../login/login";
+import fileManager from "../../utils/fileManager";
+import firebaseAuth from "../../firebase/firebase_auth.js";
+import firebaseManage from "../../firebase/firebase_manage.js";
 
 export default function Tarjetastinder() {
 

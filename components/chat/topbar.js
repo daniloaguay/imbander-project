@@ -1,7 +1,7 @@
 import { Avatar, Box } from "@material-ui/core";
-import styles from "../styles/chats.module.css";
+import styles from "../../styles/chats.module.css";
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from "../firebase/firebase";
+import { auth } from "../../firebase/firebase";
 
 export default function Topbar({ email }) {
 

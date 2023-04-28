@@ -13,6 +13,18 @@ import {
   getDoc,
 } from "firebase/firestore";
 
+const addNewUser = async (user) => {
+  const db = getFirestore();
+
+  await setDoc(doc(db, "users", user.uid), {
+    uid: user.uid,
+    email: user.email,
+    user_name: user.name,
+    created_date: new Date(),
+    updated_date: new Date(),
+  });
+};
+
 const addImage = async (imageData, uid, email, name) => {
   const db = getFirestore();
   // images/all_user_images/uid/randomIDFirebase/{created_date, updated_date, user_email, user_name}
@@ -42,7 +54,6 @@ const getImage = async (uid) => {
   return result;
 };
 
-
 const getAllImage = async (uid) => {
   const result = [];
   const db = getFirestore();
@@ -51,7 +62,8 @@ const getAllImage = async (uid) => {
   const querySnapshot = await getDocs(allImagesRef);
   querySnapshot.forEach((doc) => {
     const data = doc.data();
-    if (doc.id !== uid) { // omitir imágenes del usuario actual
+    if (doc.id !== uid) {
+      // omitir imágenes del usuario actual
       result.push({
         user_name: data.user_name,
         image: data.image,
@@ -74,8 +86,8 @@ const getUserData = async (uid) => {
   }
 };
 
-
 export default {
+  addNewUser,
   addImage,
   getImage,
   getAllImage,

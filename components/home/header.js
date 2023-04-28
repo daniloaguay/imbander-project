@@ -1,6 +1,8 @@
-import Head from "next/head";
+import React from 'react';
+import FormControlLabel from '@mui/material/FormControlLabel'; // Importa FormControlLabel desde @mui/material
+import Switch from '@mui/material/Switch';
 import Image from 'next/image';
-import styles from "../styles/tinder.module.css";
+import styles from "../../styles/tinder.module.css";
 import PersonIcon from "@mui/icons-material/Person";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import { IconButton } from "@mui/material";
@@ -31,6 +33,8 @@ export default function Header({ backboton }) {
         <IconButton href="/chatpage">
           <ChatBubbleIcon className={styles.header_icon} fontSize="large" />
         </IconButton>
+
+        <FormControlLabel control={<Switch defaultChecked />} label="Tema" />
       </div>
     </div>
   );

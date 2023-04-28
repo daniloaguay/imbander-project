@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { TextField, Button, Box } from "@material-ui/core";
 import { serverTimestamp, addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase/firebase";
-import styles from "../styles/chats.module.css";
+import { db } from "../../firebase/firebase";
+import styles from "../../styles/chats.module.css";
 
 export default function Bottombar({ id, user }) {
   const [input, setInput] = useState("");

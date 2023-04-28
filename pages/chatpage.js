@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Listchats from "../components/listchats";
+import Listchats from "../components/chat/listchats";
 
 export default function Chatpage() {
 

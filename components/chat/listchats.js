@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/chats.module.css";
+import styles from "../../styles/chats.module.css";
 import { Button, Avatar, IconButton } from "@material-ui/core";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 import { signOut } from "firebase/auth";
-import { auth } from "../firebase/firebase";
+import { auth } from "../../firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { collection, addDoc } from "@firebase/firestore";
-import { db } from "../firebase/firebase";
-import getOtherEmail from "../utils/getOtherEmail";
+import { db } from "../../firebase/firebase";
+import getOtherEmail from "../../utils/getOtherEmail";
 import { useRouter } from "next/router";
 
 export default function Listchats() {
@@ -66,7 +66,7 @@ export default function Listchats() {
         <div className={styles.chatperf}>
           <Avatar src={user.photoURL} />
           <text className={styles.text__typography}>
-          {currentUser ? currentUser.name : user.displayName}
+          {currentUser ? currentUser.user_name : user.displayName}
           </text>
         </div>
         <IconButton size="small" href="/app">

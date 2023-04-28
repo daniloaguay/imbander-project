@@ -1,9 +1,9 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-import Login from "../components/login";
-import fileManager from "../utils/fileManager";
-import firebaseAuth from "../firebase/firebase_auth.js";
-import firebaseManage from "../firebase/firebase_manage.js";
+import Login from "../login/login";
+import fileManager from "../../utils/fileManager";
+import firebaseAuth from "../../firebase/firebase_auth.js";
+import firebaseManage from "../../firebase/firebase_manage.js";
 import Image from 'next/image';
 
 

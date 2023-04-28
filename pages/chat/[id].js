@@ -9,9 +9,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { collection, doc, orderBy, query } from "firebase/firestore";
 import { db, auth } from "../../firebase/firebase";
 import getOtherEmail from "../../utils/getOtherEmail";
-import Listchats from "../../components/listchats";
-import Topbar from "../../components/topbar";
-import Bottombar from "../../components/bottombar";
+import Listchats from "../../components/chat/listchats";
+import Topbar from "../../components/chat/topbar";
+import Bottombar from "../../components/chat/bottombar";
 import { useRef, useEffect } from "react";
 import { Box, Text } from "@material-ui/core";
 

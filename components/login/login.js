@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import styles from "../styles/login.module.css";
+import styles from "../../styles/login.module.css";
 
 import GoogleIcon from "@mui/icons-material/Google";
 import { IconButton } from "@material-ui/core";
@@ -17,7 +17,7 @@ import {
   ModalBody,
 } from "reactstrap";
 
-import firebaseManage from "../firebase/firebase_manage.js";
+import firebaseManage from "../../firebase/firebase_manage";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
